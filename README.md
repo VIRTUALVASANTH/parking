@@ -1,6 +1,6 @@
 # Parking Lot System
 
-A Java parking lot management system built with minimal code structure and SOLID principles.
+A Java parking lot management system built with SOLID principles.
 
 ## Project Structure
 
@@ -160,7 +160,7 @@ payment.calculateCost(start, end, new Vehicle.EVVehicle(), true); // Works
 
 ### Compilation
 ```bash
-javac --release 8 -cp src src/*.java
+javac --release 17 -encoding UTF-8 -cp src src/*.java
 ```
 
 ### Running
@@ -200,20 +200,18 @@ Let’s calculate the cost at different time durations (for a non-EV, normal use
 | 30 min      | 1800    | 10 + (0.1 × 1800)    | Rs. 190.0 |
 | 1 hour      | 3600    | 10 + (0.1 × 3600)    | Rs. 370.0 |
 
-
-## Code Architecture
+⚡ For Electric Vehicles (EVs):
+An additional charging cost is applied at Rs. 3.00 per hour, calculated per second during parking.
+This amount is automatically added to the total parking cost for EVs.
 
 ### Design Approach
 - **Single main class** handles all system logic
-- **Nested classes** for User and Reservation (no extra files)
-- **Streamlined methods** with direct functionality
-
+- **Nested classes** for User and Reservation
+- 
 ### Technical Implementation
-- **Java 8 compatibility**
+- **Java 8+ compatibility**
 - **ANSI color codes** for visual feedback
-- **Stream API** for data processing
 - **LocalDateTime** for time handling
-- **Exception handling** for robust input validation
 
 ## Grid Display
 
